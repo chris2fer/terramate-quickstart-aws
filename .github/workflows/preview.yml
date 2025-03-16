@@ -66,10 +66,10 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.AWS_REGION }}
-          role-to-assume: arn:aws:iam::${{ env.AWS_ACCOUNT_ID }}:role/github
+          role-to-assume: arn:aws:iam::857389377478:role/MyGithubOrg
         env:
           AWS_REGION: us-east-1
-          AWS_ACCOUNT_ID: ${{ vars.AWS_ACCOUNT_ID }}
+          AWS_ACCOUNT_ID: 857389377478
 
       - name: Verify AWS credentials
         if: steps.list-changed.outputs.stdout
